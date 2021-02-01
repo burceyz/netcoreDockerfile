@@ -1,0 +1,3 @@
+FROM mcr.microsoft.com/dotnet/aspnet:5.0-focal
+RUN sed -i 's/TLSv1.2/TLSv1/g' /etc/ssl/openssl.cnf
+ENTRYPOINT ["dotnet", "HfhServer.dll"]
